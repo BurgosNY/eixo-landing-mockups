@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>V1 · Vera Saporito — comunidade dela, treinador de IA do Eixo Run</title>
+<title>V1 · Corra com a Vera</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,125,500..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -17,14 +17,11 @@
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:#E9E1D4;font-family:Inter,system-ui,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
   .page{max-width:460px;margin:0 auto;background:var(--cream);min-height:100dvh;box-shadow:0 0 60px rgba(0,0,0,.18)}
-  .disp{font-family:Archivo,Inter,sans-serif;font-stretch:125%;letter-spacing:-.01em}
 
-  /* anotações de design (não fazem parte da página) */
   .annot{display:block;width:fit-content;max-width:92%;margin:10px auto 0;border:1.5px dashed #7C3AED;color:#5B21B6;background:rgba(124,58,237,.08);font:600 11px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;padding:7px 11px;border-radius:9px;text-align:left}
   .metabar{background:#1E1B2E;color:#CBC3F5;font:600 11px/1.6 ui-monospace,monospace;padding:10px 16px;text-align:center}
   .metabar b{color:#fff}
 
-  /* HERO */
   .hero{position:relative;background:linear-gradient(180deg,#22140F 0%,#5C2416 46%,var(--terra) 100%);color:var(--cream);padding:26px 24px 0;overflow:hidden}
   .hero svg.mtn{display:block;width:100%;height:150px;margin:14px -24px -1px;transform:scale(1.12)}
   .brandrow{display:flex;align-items:center;justify-content:space-between}
@@ -43,7 +40,9 @@
   ul.gets li{display:flex;gap:12px;align-items:flex-start;font:500 15px/1.45 Inter;color:var(--ink-soft)}
   .tick{flex:none;width:22px;height:22px;border-radius:7px;background:var(--terra);color:#fff;display:grid;place-items:center;font:800 13px Inter;margin-top:1px}
 
-  /* passos */
+  .who{margin-top:20px;background:var(--sand);border-radius:16px;padding:16px 18px;font:500 13.5px/1.6 Inter;color:var(--ink-soft)}
+  .who b{color:var(--ink)}
+
   .steps{background:var(--sand);border-radius:20px;padding:22px 20px;margin-top:6px}
   .step{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid #E0D3BF}
   .step:last-child{border-bottom:0}
@@ -51,12 +50,11 @@
   .step b{display:block;font:700 14px Inter}
   .step span{font:400 13px/1.5 Inter;color:var(--ink-soft)}
 
-  /* preço + CTA */
   .price-card{background:var(--ink);color:var(--cream);border-radius:24px;padding:28px 24px;text-align:center}
   .price-card .plan{font:700 12px Inter;letter-spacing:.2em;text-transform:uppercase;color:#E8A184}
   .price{font:900 44px Archivo;font-stretch:125%;margin-top:8px}
   .price small{font:600 15px Inter;color:#C9BBB2}
-  .inc{margin-top:8px;font:500 12px Inter;color:#C9BBB2}
+  .inc{margin-top:8px;font:500 12px/1.6 Inter;color:#C9BBB2}
   .cta{display:block;width:100%;margin-top:20px;background:var(--terra);color:#fff;border:0;border-radius:14px;padding:17px;font:800 16px Archivo;font-stretch:115%;letter-spacing:.03em;text-transform:uppercase;cursor:pointer}
   .cta:active{transform:translateY(1px)}
   .wa{display:block;margin-top:12px;text-align:center;font:600 14px Inter;color:var(--cream);opacity:.85;text-decoration:underline}
@@ -65,13 +63,12 @@
   footer .powered{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--green)}
   footer .dot{width:8px;height:8px;border-radius:2px;background:var(--lime);display:inline-block}
 
-  /* CTA fixo mobile */
   .sticky{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:460px;padding:10px 14px 14px;background:linear-gradient(180deg,transparent,rgba(25,20,18,.06) 30%);}
   .sticky .cta{margin-top:0;box-shadow:0 8px 24px rgba(194,73,46,.4)}
 </style>
 </head>
 <body>
-<div class="metabar"><b>PROTÓTIPO V1 — “Só a marca dela”</b> · marca da Vera: dominante · Eixo: discreto (rodapé), mas o treinador de IA é sempre nomeado — guardrail: nunca sugerir que a Vera prescreve · formato: link-in-bio premium<br>Caixas roxas tracejadas = anotações de design, não fazem parte da página.</div>
+<div class="metabar"><b>PROTÓTIPO V1 — “Só a marca dela”</b> · voz da Vera em 1ª pessoa · página curta, público quente do Instagram<br>Caixas roxas tracejadas = anotações internas, não fazem parte da página.</div>
 <div class="page">
 
   <header class="hero">
@@ -79,9 +76,9 @@
       <div class="mono">VS</div>
       <a class="ig" href="#">@saporitoverapersonaltrainer_</a>
     </div>
-    <p class="eyebrow">Comunidade de corrida</p>
+    <p class="eyebrow">Vera Saporito</p>
     <h1>Corra<br>Comigo</h1>
-    <p class="tagline">Vera Saporito · Personal trainer e ultramaratonista de montanha. Treino individual por IA + a minha comunidade na rua e nas provas.</p>
+    <p class="tagline">Treino sob medida todos os dias. Uma turma de verdade pra correr junto. Bora?</p>
     <div class="photo-note">FOTO REAL AQUI: Vera correndo em trilha/montanha, tratamento escuro + terracota</div>
     <svg class="mtn" viewBox="0 0 460 150" preserveAspectRatio="none" aria-hidden="true">
       <polygon points="0,150 90,52 170,118 240,30 330,120 400,70 460,150" fill="#3A1B10" opacity=".55"/>
@@ -91,40 +88,45 @@
   </header>
 
   <section>
-    <p class="kicker">Sua vaga inclui</p>
-    <h2>O que você recebe</h2>
+    <p class="kicker">Na minha turma você tem</p>
+    <h2>Treino certo.<br>Gente do lado.</h2>
     <ul class="gets">
-      <li><span class="tick">✓</span>Plano de treino 100% individual, criado pelo treinador de IA a partir da sua avaliação</li>
-      <li><span class="tick">✓</span>Ajustes automáticos toda semana, conforme o que você realmente correu</li>
-      <li><span class="tick">✓</span>Corrida guiada por áudio e treinos no seu relógio (Garmin, Apple Watch)</li>
-      <li><span class="tick">✓</span>Treinões, encontros e apoio em prova com a nossa comunidade</li>
-      <li><span class="tick">✓</span>Benefícios e parceiros exclusivos de quem corre comigo</li>
+      <li><span class="tick">✓</span>Um plano feito pra você: seu nível, sua rotina, sua prova. Chega de planilha copiada.</li>
+      <li><span class="tick">✓</span>Correu, o plano se ajusta. Perdeu um treino, ele se ajusta também.</li>
+      <li><span class="tick">✓</span>Aperta o play e corre: o treino vai falando no seu ouvido o que fazer.</li>
+      <li><span class="tick">✓</span>Treinões, provas e encontros com a gente — você nunca corre sozinho.</li>
+      <li><span class="tick">✓</span>Descontos e vantagens dos nossos parceiros.</li>
     </ul>
-    <span class="annot">Mensagem corrigida: quem prescreve é o TREINADOR DE IA (Ponto de Partida → plano individual; corredor entra como <code>ai_coach + sponsored_premium</code>, sem treinador humano atribuído). A Vera vende a vaga e entrega comunidade, treinões, prova e benefícios. Mesmo na variante mais “dela”, isso fica explícito no 1º bullet.</span>
+    <div class="who">
+      <b>Quem monta seu treino?</b> O treinador de IA do Eixo Run — tecnologia de verdade, plano individual de verdade. <b>Quem corre com você?</b> Eu e a nossa turma. 🏔️
+    </div>
+    <span class="annot">Copy em 1ª pessoa, benefício antes de recurso. A divulgação de quem prescreve (obrigatória) vira um bloco de conversa “quem monta / quem corre com você” em vez de jargão de produto.</span>
   </section>
 
   <section>
-    <div class="steps">
-      <div class="step"><div class="n">1</div><div><b>Garanta sua vaga</b><span>Finalize sua inscrição no link de pagamento.</span></div></div>
-      <div class="step"><div class="n">2</div><div><b>Receba o convite</b><span>Em até 24h chega no seu e-mail o acesso ao app.</span></div></div>
-      <div class="step"><div class="n">3</div><div><b>Ponto de Partida</b><span>Você responde a avaliação e o treinador de IA monta o seu plano.</span></div></div>
+    <p class="kicker">É rapidinho</p>
+    <h2>Como começar</h2>
+    <div class="steps" style="margin-top:16px">
+      <div class="step"><div class="n">1</div><div><b>Garanta sua vaga</b><span>Inscrição pelo link de pagamento aqui embaixo.</span></div></div>
+      <div class="step"><div class="n">2</div><div><b>Olha o e-mail</b><span>Em até 1 dia chega seu convite pra entrar no app.</span></div></div>
+      <div class="step"><div class="n">3</div><div><b>Conta da sua corrida</b><span>Objetivo, rotina, prova. Em minutos seu plano aparece pronto.</span></div></div>
     </div>
-    <span class="annot">Passo 1 = LINK DE VENDA da Vera (checkout externo dela — ela define o preço). Passo 2 = convite modo IA (<code>sponsored_premium</code>) enviado pela dashboard após confirmar a venda; consome 1 das vagas que ela comprou em bulk do Eixo. Passo 3 = Ponto de Partida, obrigatório no modo IA.</span>
+    <span class="annot">Interno: passo 1 = link de venda externo da Vera; passo 2 = convite sponsored_premium modo IA pela dashboard; passo 3 = Ponto de Partida (sem citar o nome do recurso no copy).</span>
   </section>
 
   <section>
     <div class="price-card">
-      <p class="plan">Comunidade Vera Saporito</p>
+      <p class="plan">Turma da Vera</p>
       <div class="price">R$ 59<small>/mês</small></div>
-      <p class="inc">Treinador de IA + app premium incluídos</p>
+      <p class="inc">Tudo incluído: treino, app e turma.<br>Sem fidelidade — cancela quando quiser.</p>
       <button class="cta">Quero correr com a Vera</button>
-      <a class="wa" href="#">ou tire dúvidas no WhatsApp</a>
+      <a class="wa" href="#">ou me chama no WhatsApp</a>
     </div>
-    <span class="annot">💰 PAGAMENTO: este botão abre o LINK DE VENDA cadastrado pela Vera (Hotmart, Kiwify, leadlovers, Pix…). O Eixo não processa o pagamento; o preço é dela (<code>priceLabel</code> texto livre). R$ 59 segue o exemplo canônico do /assessorias: 50 vagas custam R$ 499/mês para ela → R$ 2.950/mês de receita.</span>
+    <span class="annot">💰 PAGAMENTO: botão abre o link de venda cadastrado pela assessoria (Hotmart, Kiwify, Pix…). Preço definido por ela; R$ 59 = exemplo canônico do /assessorias.</span>
   </section>
 
   <footer>
-    Treinamento por IA e app: <span class="powered"><span class="dot"></span>Eixo Run</span><br>
+    Treinos e app: <span class="powered"><span class="dot"></span>Eixo Run</span><br>
     Termos de uso · Privacidade
   </footer>
 
