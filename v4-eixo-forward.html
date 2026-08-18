@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>V4 · Eixo Run — produto na frente, Vera como treinadora oficial</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,125,500..900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#0E5A50; --green-deep:#0A423B; --mint:#EAF4EE; --lime:#D8FF72;
+    --ivory:#FAF7F0; --text:#1F2A28; --text-soft:#4C5B58; --border:#E3DED2;
+    --terra:#C2492E; --sand:#F3EBDF;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#E7E3D8;font-family:Inter,system-ui,sans-serif;color:var(--text);-webkit-font-smoothing:antialiased}
+  .page{max-width:460px;margin:0 auto;background:var(--ivory);min-height:100dvh;box-shadow:0 0 60px rgba(0,0,0,.18)}
+
+  .annot{display:block;width:fit-content;max-width:92%;margin:10px auto 0;border:1.5px dashed #7C3AED;color:#5B21B6;background:rgba(124,58,237,.08);font:600 11px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;padding:7px 11px;border-radius:9px;text-align:left}
+  .metabar{background:#1E1B2E;color:#CBC3F5;font:600 11px/1.6 ui-monospace,monospace;padding:10px 16px;text-align:center}
+  .metabar b{color:#fff}
+
+  .topbar{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--border)}
+  .logo{display:inline-flex;align-items:center;gap:7px;font:800 16px Archivo;font-stretch:120%;color:var(--green)}
+  .logo .dot{width:10px;height:10px;border-radius:3px;background:var(--lime)}
+  .topbar .via{font:600 11px Inter;color:var(--text-soft)}
+  .topbar .via b{color:var(--terra)}
+
+  .hero{background:var(--green);color:var(--mint);padding:34px 24px 30px;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(130% 80% at 90% -20%,rgba(216,255,114,.22),transparent 55%)}
+  .hero>*{position:relative}
+  .eyebrow{font:700 11px Inter;letter-spacing:.28em;text-transform:uppercase;color:var(--lime)}
+  h1{font:900 36px/1.02 Archivo;font-stretch:125%;text-transform:uppercase;margin-top:10px;color:#fff}
+  .tagline{margin-top:12px;font:500 14.5px/1.55 Inter}
+
+  /* card da treinadora dentro do hero */
+  .coach{margin-top:20px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:14px;display:flex;gap:12px;align-items:center;backdrop-filter:blur(4px)}
+  .avatar{flex:none;width:54px;height:54px;border-radius:50%;background:linear-gradient(140deg,var(--terra),#7A2C18);display:grid;place-items:center;font:800 15px Archivo;color:#fff;border:2px solid rgba(255,255,255,.5)}
+  .coach b{display:block;font:800 14px Inter;color:#fff}
+  .coach span{font:500 12px/1.45 Inter;color:#C4DAD4}
+
+  section{padding:28px 24px}
+  .kicker{font:800 11px Inter;letter-spacing:.24em;text-transform:uppercase;color:var(--green)}
+  h2{font:900 23px/1.08 Archivo;font-stretch:125%;text-transform:uppercase;margin-top:8px}
+  .lead{margin-top:10px;font:500 14px/1.6 Inter;color:var(--text-soft)}
+
+  /* grade de features — densidade alta */
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+  .feat{background:#fff;border:1px solid var(--border);border-radius:16px;padding:16px 14px}
+  .feat .ic{width:34px;height:34px;border-radius:10px;background:var(--mint);display:grid;place-items:center;font-size:16px}
+  .feat b{display:block;margin-top:10px;font:800 13px Inter}
+  .feat span{display:block;margin-top:4px;font:400 11.5px/1.5 Inter;color:var(--text-soft)}
+
+  /* fita de telas do app */
+  .screens{display:flex;gap:12px;overflow-x:auto;padding:4px 24px 12px;scroll-snap-type:x mandatory}
+  .shot{flex:none;width:150px;scroll-snap-align:start;background:#fff;border:1px solid var(--border);border-radius:20px;padding:10px}
+  .shot .bar{height:6px;width:40%;border-radius:3px;background:var(--border);margin:2px auto 8px}
+  .shot .t{font:800 10.5px Inter;color:var(--green)}
+  .shot .box{margin-top:6px;border-radius:9px;padding:7px;font:700 9.5px/1.4 Inter}
+  .bx1{background:var(--mint);color:var(--green)}
+  .bx2{background:var(--green);color:var(--lime)}
+  .bx3{background:var(--sand);color:#6B4A2F}
+  .shot .cap{margin-top:8px;font:600 10px Inter;color:var(--text-soft);text-align:center}
+
+  /* como funciona horizontal-compacto */
+  .flow{background:#fff;border:1px solid var(--border);border-radius:20px;padding:18px;margin-top:16px;display:grid;gap:0}
+  .fstep{display:flex;gap:12px;padding:11px 0;border-bottom:1px dashed var(--border)}
+  .fstep:last-child{border-bottom:0}
+  .fn{flex:none;width:26px;height:26px;border-radius:8px;background:var(--mint);color:var(--green);display:grid;place-items:center;font:800 12px Archivo}
+  .fn.pay{background:var(--terra);color:#fff}
+  .fstep b{display:block;font:700 13.5px Inter}
+  .fstep span{font:400 12.5px/1.5 Inter;color:var(--text-soft)}
+  .paytag{display:inline-block;margin-left:6px;background:var(--terra);color:#fff;font:800 10px Inter;letter-spacing:.06em;padding:3px 7px;border-radius:6px;vertical-align:1px}
+
+  details{border-bottom:1px solid var(--border);padding:13px 0}
+  summary{font:700 13.5px Inter;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+  summary::after{content:"+";font:800 18px Archivo;color:var(--green)}
+  details[open] summary::after{content:"–"}
+  details p{margin-top:8px;font:400 13px/1.6 Inter;color:var(--text-soft)}
+
+  .price-card{background:var(--green-deep);color:var(--mint);border-radius:24px;padding:28px 24px;text-align:center;position:relative;overflow:hidden}
+  .price-card::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 85% -10%,rgba(216,255,114,.2),transparent 60%)}
+  .price-card>*{position:relative}
+  .plan{font:700 12px Inter;letter-spacing:.2em;text-transform:uppercase;color:var(--lime)}
+  .price{font:900 42px Archivo;font-stretch:125%;margin-top:8px;color:#fff}
+  .price small{font:600 15px Inter;color:#9FC0B9}
+  .inc{margin-top:10px;font:500 12.5px/1.7 Inter;color:#C4DAD4}
+  .cta{display:block;width:100%;margin-top:20px;background:var(--lime);color:var(--green-deep);border:0;border-radius:14px;padding:17px;font:800 16px Archivo;font-stretch:115%;letter-spacing:.03em;text-transform:uppercase;cursor:pointer}
+  .wa{display:block;margin-top:12px;text-align:center;font:600 14px Inter;color:var(--mint);text-decoration:underline}
+
+  footer{padding:26px 24px 40px;text-align:center;color:#8B857A;font:500 12px/1.8 Inter}
+</style>
+</head>
+<body>
+<div class="metabar"><b>PROTÓTIPO V4 — “Eixo na frente”</b> · design system do Eixo Run; a treinadora entra como curadora/acento (terracota) · densidade sobre o Eixo: alta (features, telas, FAQ)<br>Caixas roxas tracejadas = anotações de design, não fazem parte da página.</div>
+<div class="page">
+
+  <div class="topbar">
+    <span class="logo"><span class="dot"></span>Eixo Run</span>
+    <span class="via">assessoria <b>Vera Saporito</b></span>
+  </div>
+
+  <header class="hero">
+    <p class="eyebrow">Treinamento de corrida completo</p>
+    <h1>Seu plano.<br>Sua treinadora.<br>Seu ritmo.</h1>
+    <p class="tagline">A plataforma que une planilha individualizada, treino guiado por áudio e integração com o seu relógio — com acompanhamento humano de verdade.</p>
+    <div class="coach">
+      <div class="avatar">VS</div>
+      <div><b>Vera Saporito — sua treinadora</b><span>Personal trainer e ultramaratonista de montanha. 68 mil corredores acompanham seu trabalho.</span></div>
+    </div>
+  </header>
+  <span class="annot">Aqui a hierarquia inverte: o produto abre a página e a treinadora é o “selo humano” dentro do herói, com o terracota dela usado só no avatar e em acentos.</span>
+
+  <section>
+    <p class="kicker">Por que o Eixo Run</p>
+    <h2>Tudo que seu treino precisa</h2>
+    <div class="grid">
+      <div class="feat"><div class="ic">🎧</div><b>Áudio-guia</b><span>Cada bloco do treino falado no seu fone, na hora certa.</span></div>
+      <div class="feat"><div class="ic">⌚</div><b>Relógio integrado</b><span>Garmin e Apple Watch recebem o treino do dia.</span></div>
+      <div class="feat"><div class="ic">📅</div><b>Calendário vivo</b><span>Planilha ajustada semana a semana pela treinadora.</span></div>
+      <div class="feat"><div class="ic">📈</div><b>Evolução visível</b><span>Ritmo, distância e constância em gráficos claros.</span></div>
+      <div class="feat"><div class="ic">🤖</div><b>IA de apoio</b><span>Analisa suas execuções e apoia as decisões da treinadora.</span></div>
+      <div class="feat"><div class="ic">💬</div><b>Canal direto</b><span>WhatsApp com a assessoria para dúvidas e ajustes.</span></div>
+    </div>
+  </section>
+
+  <div>
+    <div style="padding:0 24px"><p class="kicker">Dentro do app</p></div>
+    <div class="screens">
+      <div class="shot"><div class="bar"></div><div class="t">HOJE</div><div class="box bx1">Rodagem leve · 40 min<br>Zona 2</div><div class="box bx2">▶ Iniciar treino guiado</div><div class="cap">Treino do dia</div></div>
+      <div class="shot"><div class="bar"></div><div class="t">SEMANA 4</div><div class="box bx3">Seg · Descanso</div><div class="box bx1">Ter · 6×800m</div><div class="box bx1">Qui · Rodagem 8k</div><div class="cap">Calendário</div></div>
+      <div class="shot"><div class="bar"></div><div class="t">EVOLUÇÃO</div><div class="box bx1">Pace médio ↑ 4:58/km</div><div class="box bx3">Volume · 32 km/sem</div><div class="cap">Seu progresso</div></div>
+    </div>
+    <span class="annot">Fita horizontal com telas reais do app (aqui, wireframes). Na página de produção, screenshots verdadeiros exportados do design system.</span>
+  </div>
+
+  <section>
+    <p class="kicker">Como entrar</p>
+    <h2>4 passos até o 1º treino</h2>
+    <div class="flow">
+      <div class="fstep"><div class="fn pay">R$</div><div><b>Contrate com a Vera<span class="paytag">💰 PAGAMENTO</span></b><span>O plano é vendido pela assessoria, no checkout dela.</span></div></div>
+      <div class="fstep"><div class="fn">2</div><div><b>Convite por e-mail</b><span>A assessoria libera sua licença Premium do Eixo Run.</span></div></div>
+      <div class="fstep"><div class="fn">3</div><div><b>Avaliação inicial no app</b><span>Objetivo, histórico e rotina — leva 5 minutos.</span></div></div>
+      <div class="fstep"><div class="fn">4</div><div><b>Planilha liberada</b><span>Treinos no calendário, no fone e no relógio.</span></div></div>
+    </div>
+    <span class="annot">💰 PAGAMENTO fica no checkout externo da assessoria mesmo na variante Eixo-forward — o Eixo não intermedia. O convite do passo 2 é o fluxo <code>sponsored_premium</code> existente na dashboard.</span>
+  </section>
+
+  <section style="padding-top:4px">
+    <p class="kicker">Perguntas frequentes</p>
+    <h2>Antes de começar</h2>
+    <div style="margin-top:6px">
+      <details><summary>O que é o Eixo Run?</summary><p>Uma plataforma brasileira de treinamento de corrida usada por assessorias e treinadores. Planilhas vivas, treino guiado por áudio e integração com relógios.</p></details>
+      <details><summary>A IA substitui a treinadora?</summary><p>Não. A IA analisa seus dados e apoia a Vera nas decisões — quem prescreve e acompanha é ela.</p></details>
+      <details><summary>Preciso assinar o app separado?</summary><p>Não. A licença Premium já está incluída no plano da assessoria.</p></details>
+      <details><summary>E se eu não tiver relógio esportivo?</summary><p>Funciona só com o celular: GPS, áudio-guia e registro completo do treino.</p></details>
+    </div>
+    <span class="annot">Densidade alta: FAQ explica o produto em si (o que é, papel da IA, licença). É a variante que mais “educa” sobre o Eixo — melhor para tráfego frio, mais longa para o público quente do Instagram dela.</span>
+  </section>
+
+  <section>
+    <div class="price-card">
+      <p class="plan">Plano Assessoria · Vera Saporito</p>
+      <div class="price">R$ 249<small>/mês</small></div>
+      <p class="inc">Licença Eixo Run Premium incluída<br>Planilha individual + acompanhamento da treinadora</p>
+      <button class="cta">Quero começar</button>
+      <a class="wa" href="#">Falar com a assessoria</a>
+    </div>
+    <span class="annot">💰 PAGAMENTO: CTA lime (padrão Eixo) abrindo o LINK DE VENDA da assessoria. “Licença Premium incluída” explicita a revenda para o comprador.</span>
+  </section>
+
+  <footer>Eixo Run · Treinadora oficial desta página: Vera Saporito · Termos · Privacidade</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>V2 · Vera Saporito — marca dela, app como diferencial</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,125,500..900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#191412; --ink-soft:#3A2F2A;
+    --terra:#C2492E; --terra-deep:#8F2F1B; --peach:#F5C9A8;
+    --sand:#F3EBDF; --cream:#FBF7F0;
+    --lime:#D8FF72; --green:#0E5A50;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#E9E1D4;font-family:Inter,system-ui,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+  .page{max-width:460px;margin:0 auto;background:var(--cream);min-height:100dvh;box-shadow:0 0 60px rgba(0,0,0,.18)}
+
+  .annot{display:block;width:fit-content;max-width:92%;margin:10px auto 0;border:1.5px dashed #7C3AED;color:#5B21B6;background:rgba(124,58,237,.08);font:600 11px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;padding:7px 11px;border-radius:9px;text-align:left}
+  .metabar{background:#1E1B2E;color:#CBC3F5;font:600 11px/1.6 ui-monospace,monospace;padding:10px 16px;text-align:center}
+  .metabar b{color:#fff}
+
+  /* HERO — mesma dominância da marca dela, mas já promete o app */
+  .hero{position:relative;background:linear-gradient(180deg,#22140F 0%,#5C2416 52%,var(--terra) 100%);color:var(--cream);padding:26px 24px 34px;overflow:hidden}
+  .brandrow{display:flex;align-items:center;justify-content:space-between}
+  .mono{width:46px;height:46px;border:2px solid var(--cream);border-radius:50%;display:grid;place-items:center;font:800 15px Archivo,sans-serif}
+  .ig{font:600 12px Inter;opacity:.85;text-decoration:none;color:inherit}
+  .eyebrow{margin-top:34px;font:700 11px Inter;letter-spacing:.28em;text-transform:uppercase;color:var(--peach)}
+  h1{font:900 44px/0.95 Archivo,sans-serif;font-stretch:125%;text-transform:uppercase;margin-top:10px}
+  .tagline{margin-top:12px;font:500 15px/1.5 Inter;color:#F7E8D8;max-width:32ch}
+  .hero .chip{display:inline-flex;align-items:center;gap:8px;margin-top:18px;background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:8px 14px;font:700 12px Inter}
+  .hero .chip .dot{width:9px;height:9px;border-radius:3px;background:var(--lime)}
+  .photo-note{position:absolute;right:14px;bottom:14px;background:rgba(0,0,0,.35);border:1px dashed rgba(255,255,255,.6);color:#fff;font:600 10px/1.4 ui-monospace,monospace;padding:6px 8px;border-radius:8px;max-width:150px}
+
+  section{padding:30px 24px}
+  .kicker{font:800 11px Inter;letter-spacing:.24em;text-transform:uppercase;color:var(--terra-deep)}
+  h2{font:900 25px/1.05 Archivo,sans-serif;font-stretch:125%;text-transform:uppercase;margin-top:8px}
+  .lead{margin-top:10px;font:500 14px/1.6 Inter;color:var(--ink-soft)}
+
+  /* seção do app: telefone desenhado em CSS */
+  .app-sec{background:var(--ink);color:var(--cream)}
+  .app-sec .kicker{color:var(--peach)}
+  .phone-wrap{display:flex;gap:18px;margin-top:22px;align-items:center}
+  .phone{flex:none;width:172px;border-radius:28px;background:#0E0B0A;border:5px solid #35291F;padding:12px 10px;box-shadow:0 18px 40px rgba(0,0,0,.5)}
+  .scr{background:#FBF7F0;border-radius:16px;padding:12px 10px;color:var(--ink)}
+  .scr .sm{font:700 9px Inter;letter-spacing:.14em;text-transform:uppercase;color:#8A7B6C}
+  .scr .wt{font:800 13px/1.2 Archivo;margin-top:3px}
+  .scr .blk{margin-top:8px;border-radius:9px;padding:7px 8px;font:700 10px/1.35 Inter}
+  .b1{background:#EAF4EE;color:#0E5A50}
+  .b2{background:var(--terra);color:#fff}
+  .b3{background:#F3EBDF;color:#3A2F2A}
+  .audio{display:flex;align-items:center;gap:5px;margin-top:10px;background:#0E5A50;border-radius:9px;padding:8px}
+  .audio i{display:block;width:3px;border-radius:2px;background:var(--lime)}
+  .audio span{font:700 8.5px Inter;color:#fff;margin-left:2px}
+  .phone-feats{display:grid;gap:14px}
+  .phone-feats b{display:block;font:800 13px Inter;color:#fff}
+  .phone-feats span{font:400 12px/1.5 Inter;color:#C9BBB2}
+
+  ul.gets{list-style:none;margin-top:18px;display:grid;gap:12px}
+  ul.gets li{display:flex;gap:12px;font:500 15px/1.45 Inter;color:var(--ink-soft)}
+  .tick{flex:none;width:22px;height:22px;border-radius:7px;background:var(--terra);color:#fff;display:grid;place-items:center;font:800 13px Inter;margin-top:1px}
+
+  .steps{background:var(--sand);border-radius:20px;padding:22px 20px}
+  .step{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid #E0D3BF}
+  .step:last-child{border-bottom:0}
+  .n{flex:none;width:28px;height:28px;border-radius:50%;background:var(--ink);color:var(--cream);display:grid;place-items:center;font:800 13px Archivo}
+  .step b{display:block;font:700 14px Inter}
+  .step span{font:400 13px/1.5 Inter;color:var(--ink-soft)}
+  .paytag{display:inline-block;margin-left:6px;background:var(--terra);color:#fff;font:800 10px Inter;letter-spacing:.06em;padding:3px 7px;border-radius:6px;vertical-align:1px}
+
+  .price-card{background:var(--ink);color:var(--cream);border-radius:24px;padding:28px 24px;text-align:center}
+  .price-card .plan{font:700 12px Inter;letter-spacing:.2em;text-transform:uppercase;color:var(--peach)}
+  .price{font:900 44px Archivo;font-stretch:125%;margin-top:8px}
+  .price small{font:600 15px Inter;color:#C9BBB2}
+  .inc{margin-top:8px;font:500 12px Inter;color:#C9BBB2}
+  .cta{display:block;width:100%;margin-top:20px;background:var(--terra);color:#fff;border:0;border-radius:14px;padding:17px;font:800 16px Archivo;font-stretch:115%;letter-spacing:.03em;text-transform:uppercase;cursor:pointer}
+  .wa{display:block;margin-top:12px;text-align:center;font:600 14px Inter;color:var(--cream);opacity:.85;text-decoration:underline}
+
+  /* card "feito com Eixo" — densidade média */
+  .eixo-card{margin-top:4px;background:var(--green);color:#EAF4EE;border-radius:20px;padding:22px}
+  .eixo-card .logo{display:inline-flex;align-items:center;gap:7px;font:800 15px Archivo;color:#fff}
+  .eixo-card .logo .dot{width:10px;height:10px;border-radius:3px;background:var(--lime)}
+  .eixo-card p{margin-top:10px;font:400 13px/1.6 Inter}
+
+  footer{padding:26px 24px 40px;text-align:center;color:#8A7B6C;font:500 12px/1.8 Inter}
+</style>
+</head>
+<body>
+<div class="metabar"><b>PROTÓTIPO V2 — “Marca dela + app como arma de venda”</b> · marca da treinadora: dominante · Eixo: nomeado, com seção própria · densidade sobre o Eixo: média<br>Caixas roxas tracejadas = anotações de design, não fazem parte da página.</div>
+<div class="page">
+
+  <header class="hero">
+    <div class="brandrow">
+      <div class="mono">VS</div>
+      <a class="ig" href="#">@saporitoverapersonaltrainer_</a>
+    </div>
+    <p class="eyebrow">Assessoria de corrida</p>
+    <h1>Treine com a<br>Vera Saporito</h1>
+    <p class="tagline">Da primeira prova de rua à ultramaratona de montanha — com planilha individual e treino guiado no seu fone.</p>
+    <span class="chip"><span class="dot"></span>Acompanhamento no app Eixo Run</span>
+    <div class="photo-note">FOTO REAL: Vera em trilha, meio corpo, olhando para a câmera</div>
+  </header>
+
+  <section>
+    <p class="kicker">Assessoria completa</p>
+    <h2>O que está incluído</h2>
+    <ul class="gets">
+      <li><span class="tick">✓</span>Planilha montada pela Vera para a sua prova, seu nível e sua rotina</li>
+      <li><span class="tick">✓</span>Ajustes semanais e leitura dos seus treinos executados</li>
+      <li><span class="tick">✓</span>Acesso direto à treinadora pelo WhatsApp</li>
+      <li><span class="tick">✓</span>App completo com treino guiado, calendário e integração com relógio</li>
+    </ul>
+  </section>
+
+  <section class="app-sec">
+    <p class="kicker">A tecnologia</p>
+    <h2>Seu treino no bolso</h2>
+    <div class="phone-wrap">
+      <div class="phone">
+        <div class="scr">
+          <div class="sm">Terça · Semana 4</div>
+          <div class="wt">Intervalado 6×800m</div>
+          <div class="blk b1">Aquecimento · 15 min leve</div>
+          <div class="blk b2">6× 800m @ 4:50/km<br>rec. 2 min trote</div>
+          <div class="blk b3">Volta à calma · 10 min</div>
+          <div class="audio"><i style="height:8px"></i><i style="height:14px"></i><i style="height:10px"></i><i style="height:16px"></i><i style="height:7px"></i><span>Áudio-guia da Vera ativo</span></div>
+        </div>
+      </div>
+      <div class="phone-feats">
+        <div><b>Treino guiado por áudio</b><span>Cada bloco é falado no seu fone, no ritmo certo.</span></div>
+        <div><b>No seu relógio</b><span>Garmin e Apple Watch recebem o treino do dia.</span></div>
+        <div><b>Tudo registrado</b><span>A Vera vê o que você executou e ajusta a semana.</span></div>
+      </div>
+    </div>
+    <span class="annot" style="border-color:#B79CF1;color:#DCD1FA;background:rgba(124,58,237,.25)">Densidade média: o app vira argumento de venda com mockup de tela real, mas a página continua sendo “da Vera”. A tela do telefone usa a UI do Eixo (verde + lime), criando o primeiro contato visual com a marca do produto.</span>
+  </section>
+
+  <section>
+    <p class="kicker">Simples assim</p>
+    <h2>Como funciona</h2>
+    <div class="steps" style="margin-top:16px">
+      <div class="step"><div class="n">1</div><div><b>Escolha seu plano e pague<span class="paytag">💰 PAGAMENTO</span></b><span>Checkout seguro no link da assessoria.</span></div></div>
+      <div class="step"><div class="n">2</div><div><b>Convite no seu e-mail</b><span>Em até 24h você recebe o acesso ao Eixo Run.</span></div></div>
+      <div class="step"><div class="n">3</div><div><b>Avaliação inicial</b><span>Você conta objetivo, histórico e rotina no próprio app.</span></div></div>
+      <div class="step"><div class="n">4</div><div><b>Semana 1 liberada</b><span>Planilha pronta, áudio no fone, bora correr.</span></div></div>
+    </div>
+    <span class="annot">Passo 1 abre o LINK DE VENDA externo da assessoria; passo 2 é o convite <code>sponsored_premium</code> enviado pela dashboard (manual na v1 do produto; automatizável depois via webhook do provedor de pagamento).</span>
+  </section>
+
+  <section>
+    <div class="price-card">
+      <p class="plan">Assessoria de corrida</p>
+      <div class="price">R$ 249<small>/mês</small></div>
+      <p class="inc">Planilha individual + app Eixo Run incluído</p>
+      <button class="cta">Começar agora</button>
+      <a class="wa" href="#">Falar com a Vera no WhatsApp</a>
+    </div>
+    <span class="annot">💰 PAGAMENTO: botão abre o LINK DE VENDA da assessoria (checkout dela). “App incluído” reforça que a licença do Eixo está embutida no preço dela — é a revenda.</span>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="eixo-card">
+      <span class="logo"><span class="dot"></span>Eixo Run</span>
+      <p>A plataforma de treino usada pela assessoria da Vera: planilhas vivas, treino guiado por áudio e integração com seu relógio. Sua licença está incluída no plano.</p>
+    </div>
+    <span class="annot">Único bloco institucional do Eixo na página — 3 linhas, sem link para fora do funil dela.</span>
+  </section>
+
+  <footer>Termos de uso · Privacidade · Feito com Eixo Run</footer>
+</div>
+</body>
+</html>
